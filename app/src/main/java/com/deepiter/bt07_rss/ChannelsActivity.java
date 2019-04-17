@@ -47,7 +47,30 @@ public class ChannelsActivity extends AppCompatActivity {
             {"https://tuoitre.vn/rss/ban-doc-lam-bao.rss", "BẠN ĐỌC LÀM BÁO"},
             {"https://tuoitre.vn/rss/du-lich.rss", "DU LỊCH"}
     };
-    String[][] allBaoMoiChannels = {};
+    String[][] allBaoMoiChannels = {
+            {"https://www.24h.com.vn/upload/rss/trangchu24h.rss","TRANG CHỦ"},
+            {"https://www.24h.com.vn/upload/rss/tintuctrongngay.rss","TIN TỨC TRONG NGÀY"},
+            {"https://www.24h.com.vn/upload/rss/bongda.rss","BÓNG ĐÁ"},
+            {"https://www.24h.com.vn/upload/rss/asiancup2019.rss","ASIAN CUP 2019"},
+            {"https://www.24h.com.vn/upload/rss/anninhhinhsu.rss","AN NINH HÌNH SỰ"},
+            {"https://www.24h.com.vn/upload/rss/thoitrang.rss","THỜI TRANG"},
+            {"https://www.24h.com.vn/upload/rss/thoitranghitech.rss","THỜI TRANG HI TECH"},
+            {"https://www.24h.com.vn/upload/rss/taichinhbatdongsan.rss","TÀI CHÍNH BẤT ĐỘNG SẢN"},
+            {"https://www.24h.com.vn/upload/rss/amthuc.rss","ẨM THỰC"},
+            {"https://www.24h.com.vn/upload/rss/lamdep.rss","LÀM ĐẸP"},
+            {"https://www.24h.com.vn/upload/rss/phim.rss","PHIM"},
+            {"https://www.24h.com.vn/upload/rss/giaoducduhoc.rss","GIÁO DỤC DU HỌC"},
+            {"https://www.24h.com.vn/upload/rss/bantrecuocsong.rss","BẠN TRẺ CUỘC SỐNG "},
+            {"https://www.24h.com.vn/upload/rss/canhacmtv.rss","Ca nhạc - MTV"},
+            {"https://www.24h.com.vn/upload/rss/thethao.rss","Thể thao"},
+            {"https://www.24h.com.vn/upload/rss/phithuongkyquac.rss","Phi thường - kỳ quặc"},
+            {"https://www.24h.com.vn/upload/rss/congnghethongtin.rss","Công nghệ thông tin"},
+            {"https://www.24h.com.vn/upload/rss/oto.rss","Ô tô"},
+            {"https://www.24h.com.vn/upload/rss/thitruongtieudung.rss","Thị trường - Tiêu dùng"},
+            {"https://www.24h.com.vn/upload/rss/dulich.rss","Du lịch"},
+            {"https://www.24h.com.vn/upload/rss/suckhoedoisong.rss","Sức khỏe đời sống"},
+            {"https://www.24h.com.vn/upload/rss/cuoi24h.rss","Cười 24h"},
+    };
     String[][] allThanhNienChannels = {
             {"https://thanhnien.vn/rss/home.rss", "TIN NÓNG"},
             {"https://thanhnien.vn/rss/viet-nam.rss", "THỜI SỰ"},
@@ -143,18 +166,18 @@ public class ChannelsActivity extends AppCompatActivity {
                 }
                 break;
 
-            case "baomoi":
-                imgChannelLogo.setImageResource(R.drawable.baomoi);
-                new AlertDialog.Builder(this)
-                        .setTitle("Xuất hiện lỗi")
-                        .setMessage("Trang Báo Mới Hiện Chưa Hỗ Trợ RSS.")
-                        .setNegativeButton("Quay lại", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichOne) {
-                                onBackPressed();
-                            }
-                        }).create().show();
+            case "bao24h":
+                imgChannelLogo.setImageResource(R.drawable.bao24h);
 
-                return;
+                // define convenient URL and CAPTIONs arrays
+                urlCaption = new String[allBaoMoiChannels.length];
+                urlAddress = new String[allBaoMoiChannels.length];
+
+                for (int i = 0; i < allBaoMoiChannels.length; i++) {
+                    urlAddress[i] = allBaoMoiChannels[i][0];
+                    urlCaption[i] = allBaoMoiChannels[i][1];
+                }
+                break;
 
             case "thanhnien":
                 imgChannelLogo.setImageResource(R.drawable.thanhnien);
