@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">NEWS APP</string>
-    <string name="app_title">NEWS APP</string>
+    <string name="app_title">Ứng Dụng Tin Tức RSS</string>
     <string name="bao_tuoi_tre">Báo Tuổi Trẻ</string>
     <string name="bao_moi">Báo Mới</string>
     <string name="bao_thanh_nien">Báo Thanh Niên</string>

@@ -25,11 +25,22 @@ public class ChannelsActivity extends AppCompatActivity {
     String[] urlAddress;
 
     String[][] allTuoiTreChannels = {
-            {"https://thanhnien.vn/rss/home.rss", "Trang Chủ"},
-            {"https://thanhnien.vn/rss/viet-nam.rss", "Thời Sự"},
-            {"https://thanhnien.vn/rss/toi-viet.rss", "Tôi Viết"},
-            {"https://thanhnien.vn/rss/the-gioi.rss", "Thế Giới"},
-            {"https://thanhnien.vn/rss/van-hoa-nghe-thuat.rss", "Văn Hóa & Nghệ Thuật"}
+            {"https://thanhnien.vn/rss/home.rss", "TIN NÓNG"},
+            {"https://thanhnien.vn/rss/viet-nam.rss", "THỜI SỰ"},
+            {"https://thanhnien.vn/rss/toi-viet.rss", "TÔI VIẾT"},
+            {"https://thanhnien.vn/rss/the-gioi.rss", "THẾ GIỚI"},
+            {"https://thanhnien.vn/rss/van-hoa-nghe-thuat.rss", "VĂN HÓA"},
+            {"https://thethao.thanhnien.vn/rss/home.rss", "THỂ THAO"},
+            {"https://thanhnien.vn/rss/doi-song.rss", "ĐỜI SỐNG"},
+            {"https://thanhnien.vn/rss/kinh-doanh.rss", "TÀI CHÍNH - KINH DOANH"},
+            {"https://thanhnien.vn/rss/the-gioi-tre.rss", "GIỚI TRẺ"},
+            {"https://thanhnien.vn/rss/giao-duc.rss", "GIÁO DỤC"},
+            {"https://thanhnien.vn/rss/cong-nghe-thong-tin.rss", "CÔNG NGHỆ"},
+            {"https://game.thanhnien.vn/rss/home.rss", "GAME"},
+            {"https://thanhnien.vn/rss/doi-song/suc-khoe.rss", "SỨC KHỎE"},
+            {"https://thanhnien.vn/rss/doi-song/du-lich.rss", "DU LỊCH"},
+            {"https://xe.thanhnien.vn/rss/home.rss", "XE"},
+            {"https://thanhnien.vn/rss/ban-can-biet.rss", "BẠN CẦN BIẾT"}
     };
 
     @Override
@@ -42,7 +53,7 @@ public class ChannelsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle args = intent.getExtras();
-        website = args.getString("website");
+        website = args.getString("website").toString();
 
         //new AlertDialog.Builder(this).setTitle("Load Thành Công").setMessage(website).create().show();
         switch (website) {
@@ -84,7 +95,7 @@ public class ChannelsActivity extends AppCompatActivity {
         listViewChannel.setAdapter(adapterChannels);
     }
 
-    private String niceDate() {
+    public static String niceDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("EE MMM d, yyyy ", Locale.US);
         return sdf.format(new Date() );
     }

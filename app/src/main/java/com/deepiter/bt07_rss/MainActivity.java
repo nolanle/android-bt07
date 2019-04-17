@@ -45,8 +45,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    //public void clickedTuoiTre(View view) {
-    //    new AlertDialog.Builder(this).setTitle("CLicked Alert").setMessage("Báo Tuổi Trẻ").create().show();
-    //}
 }
