@@ -2,6 +2,7 @@ package com.deepiter.bt07_rss;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,6 @@ public class ChannelsActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterChannels;
     ListView listViewChannel;
     Context context;
-    ChannelItem selectedChannelItem;
     String[] urlCaption;
     String[] urlAddress;
 
@@ -145,15 +145,15 @@ public class ChannelsActivity extends AppCompatActivity {
 
             case "baomoi":
                 imgChannelLogo.setImageResource(R.drawable.baomoi);
-                new AlertDialog.Builder(this).setTitle("Xuất hiện lỗi").setMessage("Trang Báo Mới Hiện Chưa Hỗ Trợ RSS.").create().show();
+                new AlertDialog.Builder(this)
+                        .setTitle("Xuất hiện lỗi")
+                        .setMessage("Trang Báo Mới Hiện Chưa Hỗ Trợ RSS.")
+                        .setNegativeButton("Quay lại", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichOne) {
+                                onBackPressed();
+                            }
+                        }).create().show();
 
-                // define convenient URL and CAPTIONs arrays
-                //urlCaption = new String[allBaoMoiChannels.length];
-                //urlAddress = new String[allBaoMoiChannels.length];
-                //for (int i = 0; i < allBaoMoiChannels.length; i++) {
-                //    urlAddress[i] = allBaoMoiChannels[i][0];
-                //    urlCaption[i] = allBaoMoiChannels[i][1];
-                //}
                 return;
 
             case "thanhnien":
@@ -171,16 +171,15 @@ public class ChannelsActivity extends AppCompatActivity {
 
             case "dantri":
                 imgChannelLogo.setImageResource(R.drawable.dantri);
-
-                // define convenient URL and CAPTIONs arrays
-                urlCaption = new String[allDanTriChannels.length];
-                urlAddress = new String[allDanTriChannels.length];
-
-                for (int i = 0; i < allDanTriChannels.length; i++) {
-                    urlAddress[i] = allDanTriChannels[i][0];
-                    urlCaption[i] = allDanTriChannels[i][1];
-                }
-                break;
+                new AlertDialog.Builder(this)
+                        .setTitle("Xuất hiện lỗi")
+                        .setMessage("Trang Dân Trí RSS hiện không phù hợp định dạng.")
+                        .setNegativeButton("Quay lại", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichOne) {
+                                onBackPressed();
+                            }
+                        }).create().show();
+                return;
 
             case "vnexpress":
                 imgChannelLogo.setImageResource(R.drawable.vnexpress);
@@ -208,6 +207,7 @@ public class ChannelsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent callShowHeadlines = new Intent(ChannelsActivity.this, ShowHeadlinesActivity.class);
                 Bundle data = new Bundle();
+                data.putString("website", website);
                 data.putString("address", urlAddress[position]);
                 data.putString("caption", urlCaption[position]);
                 callShowHeadlines.putExtras(data);

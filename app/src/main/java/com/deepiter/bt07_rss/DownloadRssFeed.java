@@ -33,7 +33,7 @@ public class DownloadRssFeed extends AsyncTask<String, Void, ArrayList<ChannelIt
 
     @Override
     protected void onPreExecute() {
-        this.dialog.setMessage("Please wait\nReading RSS feed ..." ); this.dialog.setCancelable(false);
+        this.dialog.setMessage("Vui lòng đợi\nĐang đọc nội dung RSS Feed..." ); this.dialog.setCancelable(false);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class DownloadRssFeed extends AsyncTask<String, Void, ArrayList<ChannelIt
         ArrayList<ChannelItem> newsList = new ArrayList<ChannelItem>();
         urlAddress = params[0];
         urlCaption = params[1];
-        this.dialog.setMessage("Please wait\nReading RSS feed " + urlCaption + "...");
+        this.dialog.setMessage("Vui lòng đợi\nĐang đọc nội dung RSS Feed: " + urlCaption + "...");
 
         try {
             // try to get connected to RSS source
@@ -103,6 +103,8 @@ public class DownloadRssFeed extends AsyncTask<String, Void, ArrayList<ChannelIt
             Element pubDate = (Element) entry.getElementsByTagName("pubDate").item(0);
             Element link = (Element) entry.getElementsByTagName("link").item(0);
 
+            //Log.e("NODE >> ", entry.getElementsByTagName("title").item(0).toString());
+
             String titleValue = title.getFirstChild().getNodeValue();
             String descriptionValue =description.getFirstChild().getNodeValue();
             String dateValue = pubDate.getFirstChild().getNodeValue();
@@ -110,7 +112,7 @@ public class DownloadRssFeed extends AsyncTask<String, Void, ArrayList<ChannelIt
 
             return new ChannelItem(titleValue, descriptionValue, linkValue, dateValue);
         }catch (DOMException exception) {
-            return new ChannelItem("", "Error", exception.getMessage(), null);
+            return new ChannelItem("Xuất hiện lỗi", "Lỗi không đọc được RSS Feed", exception.getMessage(), null);
         }
     }
 

@@ -7,11 +7,10 @@
     android:layout_width="match_parent"
     android:gravity="center_vertical"
     android:minHeight="40sp"
-   android:textSize="20sp"
+    android:textSize="20sp"
     android:padding="4dp"
     android:textColor="#ff0000"
     android:background="@android:color/white"
     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
     android:textStyle="bold"
     xmlns:android="http://schemas.android.com/apk/res/android"/>
-

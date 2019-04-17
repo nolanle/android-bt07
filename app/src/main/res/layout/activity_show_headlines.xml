@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical">
                 <ImageView
-                    android:id="@+id/imgChannelLogo"
+                    android:id="@+id/imgShowHeadlinesChannelLogo"
                     android:src="@drawable/tuoitre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
