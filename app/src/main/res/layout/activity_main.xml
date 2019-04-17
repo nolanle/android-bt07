@@ -100,20 +100,20 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:src="@drawable/baomoi"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/bao_moi" />
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/bao_24h"
+                    android:src="@drawable/baomoi" />
 
                 <TextView
-                    android:text="@string/bao_moi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bao_24h"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textStyle="bold" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

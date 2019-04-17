@@ -50,18 +50,7 @@ public class ShowHeadlinesActivity extends AppCompatActivity {
             case "baomoi":
                 imgShowHeadlinesChannelLogo.setImageResource(R.drawable.baomoi);
                 this.setTitle("Báo Mới - " + urlCaption + " \t" + ChannelsActivity.niceDate());
-
-                new android.app.AlertDialog.Builder(this)
-                    .setTitle("Xuất hiện lỗi")
-                    .setMessage("Trang Báo Mới Hiện Chưa Hỗ Trợ RSS.")
-                    .setNegativeButton("Quay lại", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichOne) {
-                            onBackPressed();
-                        }
-                    }).create().show();
-
-                return;
-
+                break;
             case "thanhnien":
                 imgShowHeadlinesChannelLogo.setImageResource(R.drawable.thanhnien);
                 this.setTitle("Báo Thanh Niên - " + urlCaption + " \t" + ChannelsActivity.niceDate());
