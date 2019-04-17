@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:contentDescription="@string/bao_24h"
-                    android:src="@drawable/baomoi" />
+                    android:src="@drawable/bao24h" />
 
                 <TextView
                     android:layout_width="wrap_content"

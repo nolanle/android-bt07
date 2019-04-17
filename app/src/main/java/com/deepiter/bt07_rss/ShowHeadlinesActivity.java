@@ -47,9 +47,9 @@ public class ShowHeadlinesActivity extends AppCompatActivity {
                 this.setTitle("Báo Tuổi Trẻ - " + urlCaption + " \t" + ChannelsActivity.niceDate());
                 break;
 
-            case "baomoi":
-                imgShowHeadlinesChannelLogo.setImageResource(R.drawable.baomoi);
-                this.setTitle("Báo Mới - " + urlCaption + " \t" + ChannelsActivity.niceDate());
+            case "bao24h":
+                imgShowHeadlinesChannelLogo.setImageResource(R.drawable.bao24h);
+                this.setTitle("Báo 24H - " + urlCaption + " \t" + ChannelsActivity.niceDate());
                 break;
             case "thanhnien":
                 imgShowHeadlinesChannelLogo.setImageResource(R.drawable.thanhnien);

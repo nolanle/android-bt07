@@ -166,8 +166,8 @@ public class ChannelsActivity extends AppCompatActivity {
                 }
                 break;
 
-            case "baomoi":
-                imgChannelLogo.setImageResource(R.drawable.baomoi);
+            case "bao24h":
+                imgChannelLogo.setImageResource(R.drawable.bao24h);
 
                 // define convenient URL and CAPTIONs arrays
                 urlCaption = new String[allBaoMoiChannels.length];

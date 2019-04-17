@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
                 Bundle data = new Bundle();
-                data.putString("website", "baomoi");
+                data.putString("website", "bao24h");
                 channelsActivity.putExtras(data);
                 startActivity(channelsActivity);
             }
