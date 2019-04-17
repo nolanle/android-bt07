@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/background"
     android:weightSum="10"
+    android:background="@android:color/holo_blue_light"
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_weight="1.2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
@@ -24,19 +24,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
-    
+
     <GridLayout
         android:columnCount="2"
         android:rowCount="4"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:padding="12dp"
-        android:layout_weight="8.8"
+        android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
         <!-- Row 1 -->
         <android.support.v7.widget.CardView
+            android:id="@+id/cardViewTuoiTre"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -44,6 +45,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp">
 
@@ -73,6 +77,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/cardViewBaoMoi"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -80,6 +85,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp">
 
@@ -111,6 +119,7 @@
 
         <!-- Row 2 -->
         <android.support.v7.widget.CardView
+            android:id="@+id/cardViewThanhNien"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -118,6 +127,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp">
 
@@ -147,6 +159,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/cardViewDanTri"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -154,6 +167,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp">
 
@@ -185,6 +201,7 @@
 
         <!-- Row 3 -->
         <android.support.v7.widget.CardView
+            android:id="@+id/cardViewVNExpress"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -192,6 +209,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp">
 
