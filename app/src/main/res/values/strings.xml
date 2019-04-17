@@ -5,4 +5,6 @@
     <string name="bao_moi">Báo Mới</string>
     <string name="bao_thanh_nien">Báo Thanh Niên</string>
     <string name="bao_dan_tri">Báo Dân Trí</string>
+    <string name="bao_vn_express">Báo VNExpress</string>
+    <string name="bao_coming_soon">Coming Soon</string>
 </resources>

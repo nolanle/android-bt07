@@ -204,14 +204,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:src="@drawable/tuoitre"
+                    android:src="@drawable/vnexpress"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/bao_tuoi_tre" />
+                    android:contentDescription="@string/bao_vn_express" />
 
                 <TextView
-                    android:text="@string/bao_tuoi_tre"
+                    android:text="@string/bao_vn_express"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -240,16 +240,16 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:src="@drawable/tuoitre"
+                    android:src="@drawable/comingsoon"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/bao_tuoi_tre" />
+                    android:contentDescription="@string/bao_coming_soon" />
 
                 <TextView
-                    android:text="@string/bao_tuoi_tre"
+                    android:text="@string/bao_coming_soon"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -278,16 +278,16 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:src="@drawable/tuoitre"
+                    android:src="@drawable/comingsoon"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/bao_tuoi_tre" />
+                    android:contentDescription="@string/bao_coming_soon" />
 
                 <TextView
-                    android:text="@string/bao_tuoi_tre"
+                    android:text="@string/bao_coming_soon"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -314,21 +314,22 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:src="@drawable/tuoitre"
+                    android:src="@drawable/comingsoon"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/bao_tuoi_tre" />
+                    android:contentDescription="@string/bao_coming_soon" />
 
                 <TextView
-                    android:text="@string/bao_tuoi_tre"
+                    android:text="@string/bao_coming_soon"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
     </GridLayout>
 </LinearLayout>
