@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
-                Bundle args = new Bundle();
-                args.putString("website", "tuoitre");
-                channelsActivity.putExtras(args);
+                Bundle data = new Bundle();
+                data.putString("website", "tuoitre");
+                channelsActivity.putExtras(data);
                 startActivity(channelsActivity);
             }
         });
@@ -38,9 +38,45 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
-                Bundle args = new Bundle();
-                args.putString("website", "baomoi");
-                channelsActivity.putExtras(args);
+                Bundle data = new Bundle();
+                data.putString("website", "baomoi");
+                channelsActivity.putExtras(data);
+                startActivity(channelsActivity);
+            }
+        });
+
+        baoThanhNien = findViewById(R.id.cardViewThanhNien);
+        baoThanhNien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
+                Bundle data = new Bundle();
+                data.putString("website", "thanhnien");
+                channelsActivity.putExtras(data);
+                startActivity(channelsActivity);
+            }
+        });
+
+        baoDanTri = findViewById(R.id.cardViewDanTri);
+        baoDanTri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
+                Bundle data = new Bundle();
+                data.putString("website", "dantri");
+                channelsActivity.putExtras(data);
+                startActivity(channelsActivity);
+            }
+        });
+
+        baoVNExpress = findViewById(R.id.cardViewVNExpress);
+        baoVNExpress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent channelsActivity = new Intent(MainActivity.this, ChannelsActivity.class);
+                Bundle data = new Bundle();
+                data.putString("website", "vnexpress");
+                channelsActivity.putExtras(data);
                 startActivity(channelsActivity);
             }
         });
